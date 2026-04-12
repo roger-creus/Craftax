@@ -8,6 +8,10 @@ def make_craftax_env_from_name(name: str, auto_reset: bool):
             from craftax.craftax.envs.craftax_pixels_env import CraftaxPixelsEnv
 
             return CraftaxPixelsEnv()
+        elif name == "Craftax-ASCII-v1" or name == "Craftax-ASCII-AutoReset-v1":
+            from craftax.craftax.envs.craftax_ascii_env import CraftaxAsciiEnv
+
+            return CraftaxAsciiEnv()
         if (
             name == "Craftax-Classic-Symbolic-v1"
             or name == "Craftax-Classic-Symbolic-AutoReset-v1"
@@ -39,6 +43,12 @@ def make_craftax_env_from_name(name: str, auto_reset: bool):
             )
 
             return CraftaxPixelsEnvNoAutoReset()
+        elif name == "Craftax-ASCII-v1":
+            from craftax.craftax.envs.craftax_ascii_env import (
+                CraftaxAsciiEnvNoAutoReset,
+            )
+
+            return CraftaxAsciiEnvNoAutoReset()
         elif name == "Craftax-Classic-Symbolic-v1":
             from craftax.craftax_classic.envs.craftax_symbolic_env import (
                 CraftaxClassicSymbolicEnvNoAutoReset,
