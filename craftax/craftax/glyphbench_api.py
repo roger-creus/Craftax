@@ -194,8 +194,8 @@ UNICODE_CHAR_TABLE: tuple[str, ...] = (
     "?",  # 27 invalid/unknown
     "@",  # 28 you, no direction
     "*",  # 29 torch / projectile impact
-    "⇣",  # 30 ladder down
-    "⇡",  # 31 ladder up
+    "▼",  # 30 ladder down (distinct from player-facing ↓)
+    "△",  # 31 ladder up (distinct from player-facing ↑ and ruby ▲)
     "-",  # 32 arrow projectile
     "†",  # 33 dagger projectile
     "z",  # 34 zombie
